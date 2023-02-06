@@ -1,35 +1,20 @@
-import { DiApple } from "react-icons/di";
-import Button from './Button';
+import Accordion from './components/Accordion'
 
 function App() {
-  return (
-    <div>
-      <div>
-        <Button success primary rounded outline>
-          <DiApple /> 
-          Click me!!
-        </Button>
-      </div>
-      <div>
-        <Button danger outline>
-          Buy Now!
-        </Button>
-      </div>
-      <div>
-        <Button warning>See Deal!</Button>
-      </div>
-      <div>
-        <Button secondary outline>
-          Hide Ads!
-        </Button>
-      </div>
-      <div>
-        <Button primary rounded>
-          Something!
-        </Button>
-      </div>
-    </div>
-  );
+  const items = [{
+    id:1,
+    label: 'can i use javascript on a project?',
+    content: "You can use javascript on any project u want to work on in any project"
+  },{
+    id:2,
+    label: 'can i use react on a project?',
+    content: "You can use javascript on any project u want to work on in any project"
+  },{
+    id:3,
+    label: 'can i use ruby on rails on a project?',
+    content: "You can use javascript on any project u want to work on in any project"
+  }]
+  return <Accordion items={items}/>
 }
 
 export default App;
