@@ -9,7 +9,6 @@ function Accordion({items}){
       </div>
     )
   })
-  // console.log(renderedItems)
   return <div>{renderedItems}</div>;
 };
 
