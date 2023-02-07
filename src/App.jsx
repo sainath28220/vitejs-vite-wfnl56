@@ -1,6 +1,16 @@
+import { useState } from 'react';
 import Accordion from './components/Accordion'
 
+
 function App() {
+  const [ index,setIndex ] = useState(0);
+  const handleClick = (id) => {
+    if (id===index){
+      setIndex(0)
+    }else{
+      setIndex(id)
+    }
+  }
   const items = [{
     id:1,
     label: 'can i use javascript on a project?',
@@ -14,7 +24,9 @@ function App() {
     label: 'can i use ruby on rails on a project?',
     content: "You can use javascript on any project u want to work on in any project"
   }]
-  return <Accordion items={items}/>
+  return( 
+    <Accordion items={items}/>
+  )
 }
 
 export default App;
